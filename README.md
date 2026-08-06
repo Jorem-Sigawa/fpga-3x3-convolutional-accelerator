@@ -100,10 +100,13 @@ The accelerator consists of the following processing stages:
 **RGB**
 | Original | Processed |
 |:---:|:---:|
-| <img src="sim_grayscale/input.png" alt="Original image" width="400"> | <img src="sim_grayscale/processed.png" alt="Processed image" width="400"> |
+| <img src="assets/test_rgb.png" alt="Original image" width="400"> | <img src="sim_rgb/test_rgb_processed.png" alt="Processed image" width="400"> |
 <p align="center">
-  <em> Input grayscale image processed with a Sobel Y filter. </em>
+  <em> Input RGB image processed with a sharpening filter. </em>
 </p>
+
+## Current limitations:
+- Still working on running the architecture on the Zybo Z7-10
 
 
 
