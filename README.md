@@ -28,7 +28,7 @@ The accumulated result then becomes the pixel value for the new, processed image
   <img
     src="assets/A_simple_image_convolution.gif"
     alt="Convolution process"
-    width="700"
+    width="400"
   >
 </p>
 
