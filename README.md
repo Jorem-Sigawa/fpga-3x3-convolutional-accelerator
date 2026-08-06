@@ -28,6 +28,5 @@ The accumulated result then becomes the pixel value for the new, processed image
 
 Kernels are often designed to make certain features of an image more visible.
 
-| Sobel Edge |
-|---|---|
+
 | ![Sobel Edge](assets/sobel_edge.jpg) |
