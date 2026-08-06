@@ -16,6 +16,7 @@ The accelerator is written in Verilog and is to be implemented on the Digilent Z
 </p>
 
 ## Overview
+
 <p align="justify">
 Two-dimensional convolution is a critical operation in image processing that allows us to detect or extract features of an image.
 It works as follows: an NxN matrix of coefficients, referred to as the kernel, is slid across an image in raster order and "convolved" with the overlapping NxN patch of the input image.
