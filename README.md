@@ -28,11 +28,17 @@ The accumulated result then becomes the pixel value for the new, processed image
   <img
     src="assets/A_simple_image_convolution.gif"
     alt="Convolution process"
-    width="400"
+    width="700"
   >
 </p>
 
 
 Kernels are often designed to make certain features of an image more visible.
 
-![Sobel Edge](assets/sobel_edge.jpg) 
+<p align="center">
+  <img
+    src="assets/sobel_edge"
+    alt="Sobel Edge"
+    width="400"
+  >
+</p>
