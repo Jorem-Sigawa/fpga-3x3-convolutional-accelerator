@@ -1,0 +1,7 @@
+src/clipper.v
+src/line_buffer.v
+src/scan.v
+src/signed_mac3x3.v
+src/top_module.v
+src/window_generator.v
+sim_grayscale/accelerator_tb.v

@@ -12,7 +12,7 @@ reg [7:0] pixel_in_r;
 reg [7:0] pixel_in_g;
 reg [7:0] pixel_in_b;
 
-// Convolutional kernel
+// Convolutional kernel (currently a sharpening filter)
 wire signed [7:0] b00 = -8'sd2;
 wire signed [7:0] b01 = -8'sd1;
 wire signed [7:0] b02 = 8'sd0;

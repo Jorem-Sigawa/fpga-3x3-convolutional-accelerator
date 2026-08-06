@@ -9,17 +9,18 @@ reg start;
 reg valid_in;
 reg [7:0] pixel_in;
 
-wire signed [7:0] b00 = -8'sd2;
-wire signed [7:0] b01 = -8'sd1;
-wire signed [7:0] b02 = 8'sd0;
+// Convolutional kernel (currently a Sobel X filter)
+wire signed [7:0] b00 = -8'sd1;
+wire signed [7:0] b01 = -8'sd0;
+wire signed [7:0] b02 = 8'sd1;
 
-wire signed [7:0] b10 = -8'sd1;
-wire signed [7:0] b11 = 8'sd1;
-wire signed [7:0] b12 = 8'sd1;
+wire signed [7:0] b10 = -8'sd2;
+wire signed [7:0] b11 = 8'sd0;
+wire signed [7:0] b12 = 8'sd2;
 
-wire signed [7:0] b20 = -8'sd0;
-wire signed [7:0] b21 = 8'sd1;
-wire signed [7:0] b22 = 8'sd2;
+wire signed [7:0] b20 = -8'sd1;
+wire signed [7:0] b21 = 8'sd0;
+wire signed [7:0] b22 = 8'sd1;
 
 wire [7:0] pixel_out;
 wire valid_out;
@@ -60,7 +61,7 @@ end
 
 //read input image and feed pixels
 initial begin //code is executed sequentially inside the same initial block
-    $readmemh("sim/image.hex", image_mem);
+    $readmemh("image.hex", image_mem);
 
     nrst = 0;
     start = 0;
@@ -83,8 +84,9 @@ initial begin //code is executed sequentially inside the same initial block
 end
 
 //write output pixels
+//this executes instantly at t=0, outfile is guaranteed to be open and valid before $fwrite
 initial begin
-    outfile = $fopen("sim/output.hex", "w");
+    outfile = $fopen("output.hex", "w");
     out_count = 0;
 
 end
