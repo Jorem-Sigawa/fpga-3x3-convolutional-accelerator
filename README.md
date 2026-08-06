@@ -37,7 +37,7 @@ Kernels are often designed to make certain features of an image more visible.
 
 <p align="center">
   <img
-    src="assets/sobel_edge"
+    src="assets/sobel_edge.jpg"
     alt="Sobel Edge"
     width="400"
   >
