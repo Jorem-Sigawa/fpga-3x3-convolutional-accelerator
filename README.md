@@ -58,6 +58,7 @@ rapidly growing need for specialized convolutional accelerators that could perfo
 ## Features
 - Streaming pixel input
 - Configurable signed 3×3 convolution kernel
+- Supports Grayscale and RGB!
 - Two-line pixel buffer for spatial data reuse
 - Parallel nine-element multiply–accumulate operation
 - Signed convolution results
@@ -71,7 +72,7 @@ rapidly growing need for specialized convolutional accelerators that could perfo
 The accelerator consists of the following processing stages:
 
 1. **Scan controller**  
-   Tracks the current image row and column.
+   Tracks the current image row (iterations) and column (scan).
 
 2. **Line buffer**  
    Stores pixels from the previous two image rows.
@@ -85,4 +86,24 @@ The accelerator consists of the following processing stages:
 
 5. **Clipper**  
    Restricts the convolution result to the valid output-pixel range.
+
+## Example results
+
+**Grayscale**
+| Original | Processed |
+|:---:|:---:|
+| <img src="sim_grayscale/input.png" alt="Original image" width="400"> | <img src="sim_grayscale/processed.png" alt="Processed image" width="400"> |
+<p align="center">
+  <em> Input grayscale image processed with a Sobel Y filter. </em>
+</p>
+
+**RGB**
+| Original | Processed |
+|:---:|:---:|
+| <img src="sim_grayscale/input.png" alt="Original image" width="400"> | <img src="sim_grayscale/processed.png" alt="Processed image" width="400"> |
+<p align="center">
+  <em> Input grayscale image processed with a Sobel Y filter. </em>
+</p>
+
+
 
